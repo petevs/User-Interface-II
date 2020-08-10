@@ -54,7 +54,7 @@ header h2{
     flex-basis: 100%;
 }
 
-nav a, section.hero a {
+nav a, section.hero a, .button {
     padding: 5px 10px;
     background: white;
     border: 1px solid #cccccc;
@@ -65,7 +65,7 @@ nav a, section.hero a {
     margin: -3px;
 }
 
-header nav a:hover, section.hero a:hover {
+header nav a:hover, section.hero a:hover, .button:hover {
     transition: 450ms;
     transform: scale(1.2);
     background-color: red;
@@ -117,6 +117,13 @@ section.projects {
 .project-card:hover {
     transition: 450ms;
     transform: scale(1.05);
+}
+
+footer {
+    background-color: #f7f7f7;
+    text-transform: capitalize;
+    width: 100%;
+    padding: 40px;
 }
 
 /* Mobile Settings */
