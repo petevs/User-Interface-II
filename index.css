@@ -12,24 +12,25 @@
 
   body{
     line-height:2;
-    font-size:1.4rem;
-    font-family: 'Cardo', serif;
+    font-size:1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #0F0D22;
   }
 
 /* My stylings start after here */
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: -1px;
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 4.8rem;
 }
 
 h2 {
-    font-size: 2.4rem;
+    font-size: 3.2rem;
+
 }
 
 h3 {
@@ -41,77 +42,168 @@ a {
     color: inherit;
 }
 
+/*Default image style */
+
 img {
     border-radius: 6px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
+/*HEADER SECTION */
+
+/*Full width wrapper*/
+.wrap {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*HEADER SECTION */
 header {
     padding: 20px;
-    border-bottom: 1px solid #cccccc;
 }
 
 header h2{
     flex-basis: 100%;
+    margin: 0 auto;
 }
 
-nav a, section.hero a, .button {
+.flex-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 33.3333%;
+    text-transform: uppercase;
+}
+
+.flex-nav li {
+    flex:1;
+}
+
+.flex-nav a {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: rgba(0,0,0,0.2);
     padding: 5px 10px;
-    background: white;
-    border: 1px solid #cccccc;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.container {
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.button {
+    padding: 8px 16px;
+    background: #e63946;
+    color: #ffffff;
+    border-radius: 6px;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0,.15);
     font-family: 'Montserrat';
-    font-weight: 600;
-    letter-spacing: -1px;
-    margin: -3px;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
-header nav a:hover, section.hero a:hover, .button:hover {
+.button:hover {
+    background: #CF333F;
+    
+}
+
+
+
+header nav a:hover{
     transition: 450ms;
-    transform: scale(1.2);
-    background-color: red;
+    transform: scale(1.08);
+    background-color: #e63946;
 }
 
 
-.active {
-    background-color: #457b9d;
-    color: #ffffff;
+.flex-nav .active {
+    background-color: black;
 }
 
+/* HERO SECTION */
 section.hero {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 20px 10px;
+    padding: 40px 10px;
+    justify-content: flex-start;
 }
 
-.hero p {
-    line-height: 2rem;
-    padding-top: 10px;
-}
-
-section div {
+.hero div {
     flex-basis: 50%;
     padding: 0px 10px;
 }
 
-section.projects {
+/*Image column */
+
+.hero-image img {
+    width: 95%;
+}
+
+/*Writeup column */
+.write-up {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero p {
+    line-height: 2.5rem;
+    padding-top: 20px;
+}
+
+.write-up img {
+    width: 1.4rem;
+    padding-right: 2px;
+}
+
+/*Projects Section */
+
+.projects {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
     text-align: center;
-    padding: 0px 10px;
-    margin-top: -10px;
+    padding: 20px 10px;
 }
 
 .project-card {
     max-width: 33%;
-    padding: 10px;
+    padding: 20px 10px;
 }
 
-.project-card h3 {
-    margin-top:-10px;
+.mockup-box {
+    background: white;
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 6px;
+    min-height: calc(100vh * .35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mockup-box img {
+    border-radius: 0;
+    box-shadow: 0px 16px 32px 0px rgba(0,0,0,.20);
+    width: 80%;
+}
+
+.project-card h4 {
+    margin-top:0px;
     padding: 5px 0px;
+    font-size: 1.8rem;
 }
 
 .project-card:hover {
@@ -120,23 +212,52 @@ section.projects {
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #f7f7f7;
     text-transform: capitalize;
-    width: 100%;
     padding: 40px;
+
 }
+
+.blank-section {
+    height: 67vh;
+    padding: 20px;
+}
+
+
+/* Tablet Settings */
+@media only screen and (max-width: 860px) {
+
+    section.hero {
+        flex-direction: column;
+    }
+
+    .hero div{
+        flex-basis: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-card {
+        max-width: 50%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+}
+
+
 
 /* Mobile Settings */
 @media only screen and (max-width: 600px) {
     
-    header h2 {
-        text-align: center;
-    }
 
-    nav {
-        display: flex;
-        flex-basis: 100%;
-        justify-content: center;
+    .flex-nav ul {
+        width: 100%;
     }
 
     nav a{
@@ -144,13 +265,12 @@ footer {
     }
     
     
-    section div {
-        flex-basis: 100%;
-        text-align: center;
+    section.hero {
+        flex-direction: column;
     }
 
     .project-card {
-        max-width: 50%;
+        max-width: 100%;
     }
 }
 
