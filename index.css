@@ -222,10 +222,26 @@ footer {
 }
 
 .blank-section {
-    height: 67vh;
+    height: 60vh;
     padding: 20px;
+    max-width: 1680px;
+    margin: 0 auto;
 }
 
+.social {
+    margin-top: 30px;
+    font-size: 2.4rem;
+    color: #cccccc;
+}
+
+.social a {
+    padding: 2.5px;
+}
+
+.social a:hover {
+    color: #000000;
+
+}
 
 /* Tablet Settings */
 @media only screen and (max-width: 860px) {
@@ -251,10 +267,12 @@ footer {
 }
 
 
-
 /* Mobile Settings */
 @media only screen and (max-width: 600px) {
     
+    header h2 {
+        text-align: center;
+    }
 
     .flex-nav ul {
         width: 100%;
