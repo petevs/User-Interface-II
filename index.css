@@ -244,7 +244,7 @@ footer {
 }
 
 /* Tablet Settings */
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 800px) {
 
     section.hero {
         flex-direction: column;
@@ -268,14 +268,21 @@ footer {
 
 
 /* Mobile Settings */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     
     header h2 {
         text-align: center;
     }
 
     .flex-nav ul {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
+    }
+
+    .flex-nav li {
+        width: 50%;
     }
 
     nav a{
@@ -289,6 +296,12 @@ footer {
 
     .project-card {
         max-width: 100%;
+    }
+
+    footer h2 {
+        text-align: center;
+        line-height: 4rem;
+        font-size: 2.4rem;
     }
 }
 
